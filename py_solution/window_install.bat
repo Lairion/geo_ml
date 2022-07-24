@@ -1,0 +1,15 @@
+pip install wheel
+pip install pipwin
+pipwin install numpy
+pipwin install pandas
+pipwin install shapely
+pipwin install gdal
+pipwin install fiona
+pipwin install pyproj
+pipwin install six
+pipwin install rtree
+pip install geopandas
+pip install tensorflow
+pip install matplotlib
+pip install cudatoolkit
+pip install cudnn
