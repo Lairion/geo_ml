@@ -50,21 +50,21 @@ def train_model():
     image_batch, labels_batch = next(iter(normalized_ds))
     first_image = image_batch[0]
     num_classes = len(class_names)
-    if not model_path.is_dir():
-        model = Sequential([
-            layers.Rescaling(1./255, input_shape=(IMG_HEIGHT, IMG_WIDTH, 3)),
-            layers.Conv2D(16, 3, padding='same', activation='relu'),
-            layers.MaxPooling2D(),
-            layers.Conv2D(32, 3, padding='same', activation='relu'),
-            layers.MaxPooling2D(),
-            layers.Conv2D(64, 3, padding='same', activation='relu'),
-            layers.MaxPooling2D(),
-            layers.Flatten(),
-            layers.Dense(128, activation='relu'),
-            layers.Dense(num_classes)
-        ])
-    else:
-        model = tf.keras.models.load_model(model_path)
+    # if not model_path.is_dir():
+    model = Sequential([
+        layers.Rescaling(1./255, input_shape=(IMG_HEIGHT, IMG_WIDTH, 3)),
+        layers.Conv2D(16, 3, padding='same', activation='relu'),
+        layers.MaxPooling2D(),
+        layers.Conv2D(32, 3, padding='same', activation='relu'),
+        layers.MaxPooling2D(),
+        layers.Conv2D(64, 3, padding='same', activation='relu'),
+        layers.MaxPooling2D(),
+        layers.Flatten(),
+        layers.Dense(128, activation='relu'),
+        layers.Dense(num_classes)
+    ])
+    # else:
+    #model = tf.keras.models.load_model(model_path)
     model.compile(
         optimizer='adam',
         loss=tf.keras.losses.SparseCategoricalCrossentropy(

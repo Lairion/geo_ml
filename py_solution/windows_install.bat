@@ -11,5 +11,4 @@ pipwin install rtree
 pip install geopandas
 pip install tensorflow
 pip install matplotlib
-pip install cudatoolkit
-pip install cudnn
+pip install cupy-cuda112
