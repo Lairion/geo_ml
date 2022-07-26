@@ -1,7 +1,10 @@
 import os
 from pathlib import Path
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+GPU = False
+
+if GPU:
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 BASE_DIR = Path(__file__).parent
 
 ROOT_DIR = BASE_DIR.parent
