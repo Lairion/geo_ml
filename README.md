@@ -9,7 +9,7 @@ https://developer.nvidia.com/cuda-11.2.2-download-archive
 
 cudnn 8.1:
 https://developer.nvidia.com/rdp/cudnn-archive#a-collapse811-111
-Unpack cudnn (Better near the CUDA) and it to system env variable PATH
+Unpack cudnn (Better near the CUDA) and add it to system env variable PATH
 
 find ZLib dll in external_lib folder and add it to CUDA's 'bin' folder
 
