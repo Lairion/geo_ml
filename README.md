@@ -2,6 +2,17 @@
 
 # How to start Python solution
 
+## Install external lib for NVIDIA
+
+CUDA 11.2:
+https://developer.nvidia.com/cuda-11.2.2-download-archive
+
+cudnn 8.1:
+https://developer.nvidia.com/rdp/cudnn-archive#a-collapse811-111
+Unpack cudnn (Better near the CUDA) and it to system env variable PATH
+
+find ZLib dll in external_lib folder and add it to CUDA's 'bin' folder
+
 ## Install Python
 Download and install latest Python version on https://www.python.org/
 
